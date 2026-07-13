@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}Recommendation System — gear for people who patch their own sound{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">real-time recommendation engine</p>
+    <h1>Every click routes a new signal.</h1>
+    <p class="hero-sub">Browse the shop. The <strong>Live Signal</strong> panel on the right
+      isn't sorted by what people bought last year — it's re-patched the instant you
+      hover, open, or add something to your cart.</p>
+  </div>
+</section>
+
+<div class="shop-layout">
+  <section class="product-grid" aria-label="Product catalog">
+    {% for cat, items in products | groupby("category") %}
+    <div class="category-block">
+      <h2 class="category-title">{{ cat }}</h2>
+      <div class="grid">
+        {% for p in items %}
+        <article class="card" data-id="{{ p.id }}" tabindex="0">
+          <div class="card-badge cat-{{ p.category | replace(' ', '-') | replace('&','') | lower }}">
+            {{ {
+              'Synthesizers': '◈',
+              'Drum Machines': '◍',
+              'Effects Pedals': '◎',
+              'Eurorack Modules': '▨',
+              'Cables & Accessories': '⌇'
+            }[p.category] }}
+          </div>
+          <h3 class="card-title">
+            <a href="{{ url_for('product_detail', product_id=p.id) }}" data-track-click="{{ p.id }}">{{ p.name }}</a>
+          </h3>
+          <p class="card-brand">{{ p.brand }}</p>
+          <p class="card-price">Rs.{{ "%.0f"|format(p.price) }}</p>
+          <button class="btn-add-cart" data-cart-id="{{ p.id }}">add to cart</button>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+
+  <aside class="signal-panel" aria-label="Live recommendations">
+    <div class="signal-panel-header">
+      <h2>Live Signal</h2>
+      <span class="signal-sub">recommended for you</span>
+    </div>
+    <p class="signal-source" id="signal-source">Hover or open a product to patch a signal.</p>
+    <ul class="rec-list" id="rec-list">
+      {% for p in recs %}
+      <li class="rec-item" data-id="{{ p.id }}">
+        <span class="cable-glyph" aria-hidden="true"></span>
+        <div class="rec-body">
+          <a href="{{ url_for('product_detail', product_id=p.id) }}">{{ p.name }}</a>
+          <span class="rec-meta">{{ p.brand }} · Rs.{{ "%.0f"|format(p.price) }}</span>
+        </div>
+        <span class="rec-tag rec-tag-{{ p._reason }}">{{ p._reason }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </aside>
+</div>
+{% endblock %}

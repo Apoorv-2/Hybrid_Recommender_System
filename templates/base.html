@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Recommendation System.{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="logo" href="{{ url_for('index') }}">
+      <span class="logo-mark">◉</span> Recommendation&nbsp;<span class="logo-amp">&amp;</span>&nbsp;System.
+    </a>
+    <nav class="site-nav">
+      <span class="signal-indicator" id="signal-indicator" title="Recommendation engine activity">
+        <span class="signal-dot"></span> live
+      </span>
+      <a class="cart-link" href="{{ url_for('cart') }}">
+        cart <span class="cart-count" id="cart-count">{{ cart_count }}</span>
+      </a>
+    </nav>
+  </header>
+
+  <main class="page">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <span>Recommendation &amp; System — gear for people who patch their own sound.</span>
+    <button class="reset-link" id="reset-session">reset my session</button>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  {% block scripts %}{% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}{{ product.name }} — Recommendation System {% endblock %}
+
+{% block content %}
+<div class="product-detail">
+  <a class="back-link" href="{{ url_for('index') }}">&larr; back to shop</a>
+  <div class="product-main">
+    <div class="product-badge-large cat-{{ product.category | replace(' ', '-') | replace('&','') | lower }}">
+      {{ {
+        'Synthesizers': '◈',
+        'Drum Machines': '◍',
+        'Effects Pedals': '◎',
+        'Eurorack Modules': '▨',
+        'Cables & Accessories': '⌇'
+      }[product.category] }}
+    </div>
+    <div class="product-info">
+      <p class="eyebrow">{{ product.category }} · {{ product.brand }}</p>
+      <h1>{{ product.name }}</h1>
+      <p class="product-desc">{{ product.description }}</p>
+      <p class="product-price">${{ "%.0f"|format(product.price) }}</p>
+      <button class="btn-add-cart btn-large" data-cart-id="{{ product.id }}">add to cart</button>
+      <div class="tag-row">
+        {% for t in product.tags %}<span class="tag">{{ t }}</span>{% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <section class="signal-panel signal-panel-inline" aria-label="Live recommendations">
+    <div class="signal-panel-header">
+      <h2>Live Signal</h2>
+      <span class="signal-sub">because you're looking at this</span>
+    </div>
+    <ul class="rec-list" id="rec-list">
+      {% for p in recs %}
+      <li class="rec-item" data-id="{{ p.id }}">
+        <span class="cable-glyph" aria-hidden="true"></span>
+        <div class="rec-body">
+          <a href="{{ url_for('product_detail', product_id=p.id) }}">{{ p.name }}</a>
+          <span class="rec-meta">{{ p.brand }} · Rs.{{ "%.0f"|format(p.price) }}</span>
+        </div>
+        <span class="rec-tag rec-tag-{{ p._reason }}">{{ p._reason }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>
+{% endblock %}

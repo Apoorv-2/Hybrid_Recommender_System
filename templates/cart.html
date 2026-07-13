@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Cart — Recommendation System{% endblock %}
+
+{% block content %}
+<div class="cart-page">
+  <a class="back-link" href="{{ url_for('index') }}">&larr; back to shop</a>
+  <h1>Your cart</h1>
+  {% if items %}
+  <ul class="cart-list">
+    {% for p in items %}
+    <li class="cart-row">
+      <span class="cart-row-name">{{ p.name }}</span>
+      <span class="cart-row-brand">{{ p.brand }}</span>
+      <span class="cart-row-price">Rs.{{ "%.0f"|format(p.price) }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+  <p class="cart-total">Total: Rs.{{ "%.0f"|format(items | sum(attribute="price")) }}</p>
+  {% else %}
+  <p class="empty-state">Nothing patched in yet. Add something from the shop and it'll show up here.</p>
+  {% endif %}
+</div>
+{% endblock %}
