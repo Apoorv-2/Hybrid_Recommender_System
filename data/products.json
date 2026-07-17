@@ -1,0 +1,218 @@
+[
+  {
+    "id": 1,
+    "name": "MicroFreak Hybrid Synth",
+    "brand": "Arturia",
+    "category": "Synthesizers",
+    "price": 31900,
+    "tags": ["hybrid", "paraphonic", "wavetable", "capacitive-keyboard"],
+    "description": "An experimental paraphonic synthesizer combining digital oscillators with a real analog resonant filter and a unique touch-plate keyboard controller."
+  },
+  {
+    "id": 2,
+    "name": "Minilogue XD",
+    "brand": "Korg",
+    "category": "Synthesizers",
+    "price": 54500,
+    "tags": ["analog", "polyphonic", "hybrid", "multi-engine"],
+    "description": "A 4-voice polyphonic analog synthesizer equipped with a customizable digital multi-engine and high-quality stereo effects processor."
+  },
+  {
+    "id": 3,
+    "name": "Bass Station II",
+    "brand": "Novation",
+    "category": "Synthesizers",
+    "price": 38900,
+    "tags": ["analog", "monophonic", "bass", "distortion"],
+    "description": "A pure analog monophonic synthesizer optimized for heavy bass, featuring two oscillators, a sub-oscillator, and dual filter architectures."
+  },
+  {
+    "id": 4,
+    "name": "Digitone",
+    "brand": "Elektron",
+    "category": "Synthesizers",
+    "price": 72000,
+    "tags": ["digital", "fm-synthesis", "sequencer", "polyphonic"],
+    "description": "An 8-voice polyphonic digital FM synthesizer paired with a legendary world-class hardware step sequencer for complex generative routing."
+  },
+  {
+    "id": 5,
+    "name": "TR-08 Rhythm Composer",
+    "brand": "Roland",
+    "category": "Drum Machines",
+    "price": 34000,
+    "tags": ["digital", "drum machine", "classic", "boutique"],
+    "description": "An ultra-compact hardware recreation of the legendary TR-808 drum machine, leveraging Roland's ACB technology for punchy analog-style percussion."
+  },
+  {
+    "id": 6,
+    "name": "Volca Sample 2",
+    "brand": "Korg",
+    "category": "Drum Machines",
+    "price": 12900,
+    "tags": ["digital", "sampler", "sequencer", "lo-fi"],
+    "description": "A pocket-sized compact digital sample sequencer that lets you edit, layer, and sequence 8-bit style lo-fi rhythm tracks anywhere."
+  },
+  {
+    "id": 7,
+    "name": "RD-9 Rhythm Designer",
+    "brand": "Behringer",
+    "category": "Drum Machines",
+    "price": 31500,
+    "tags": ["analog", "drum machine", "classic", "909"],
+    "description": "A massive authentic analog reproduction of the classic 909 drum machine, featuring an integrated 64-step sequencer and wave designer controls."
+  },
+  {
+    "id": 8,
+    "name": "BigSky Multiverb",
+    "brand": "Strymon",
+    "category": "Effects Pedals",
+    "price": 43500,
+    "tags": ["reverb", "shimmer", "ambient", "stereo"],
+    "description": "A premium architectural studio-grade reverb pedal providing ultra-lush shimmer, cloud, and chorused room algorithms for massive atmospheric depth."
+  },
+  {
+    "id": 9,
+    "name": "Carbon Copy Analog Delay",
+    "brand": "MXR",
+    "category": "Effects Pedals",
+    "price": 14200,
+    "tags": ["delay", "bucket-brigade", "analog", "modulation"],
+    "description": "A classic bucket-brigade analog delay pedal delivering up to 600ms of rich, dark, warm echo repeats with switchable top-panel modulation."
+  },
+  {
+    "id": 10,
+    "name": "Hall of Fame 2",
+    "brand": "TC Electronic",
+    "category": "Effects Pedals",
+    "price": 12800,
+    "tags": ["reverb", "shimmer", "mash-button", "stereo"],
+    "description": "An iconic stereo reverb pedal updated with a pressure-sensitive MASH foot switch and highly realistic ambient algorithms."
+  },
+  {
+    "id": 11,
+    "name": "Julia V2 Chorus",
+    "brand": "Walrus Audio",
+    "category": "Effects Pedals",
+    "price": 18500,
+    "tags": ["chorus", "vibrato", "analog", "modulation"],
+    "description": "A fully analog chorus and vibrato pedal equipped with a unique blend knob to dial in rich, warbly, and liquid pitch modulation."
+  },
+  {
+    "id": 12,
+    "name": "Plumes Signal Booster",
+    "brand": "EarthQuaker Devices",
+    "category": "Effects Pedals",
+    "price": 9900,
+    "tags": ["overdrive", "boost", "distortion", "analog"],
+    "description": "A high-headroom, low-noise analog overdrive pedal with 3 distinct clipping modes, adding crisp clarity and midrange bite to any signal."
+  },
+  {
+    "id": 13,
+    "name": "Plaits Macro Oscillator",
+    "brand": "Mutable Instruments",
+    "category": "Eurorack Modules",
+    "price": 22500,
+    "tags": ["eurorack", "digital-vco", "modular", "macro"],
+    "description": "A legendary multi-model macro oscillator module offering 16 distinct digital sound synthesis models, from virtual analog to speech generation."
+  },
+  {
+    "id": 14,
+    "name": "Forbidden Planet VCF",
+    "brand": "TiTopia / Tiptop Audio",
+    "category": "Eurorack Modules",
+    "price": 11800,
+    "tags": ["eurorack", "vcf", "filter", "modular", "resonant"],
+    "description": "An aggressive analog voltage-controlled filter module based on classic Steiner-Parker synth designs, featuring low-pass, high-pass, and band-pass sweeps."
+  },
+  {
+    "id": 15,
+    "name": "Maths Dual Function Generator",
+    "brand": "Make Noise",
+    "category": "Eurorack Modules",
+    "price": 28500,
+    "tags": ["eurorack", "modulation", "lfo", "envelope", "utility"],
+    "description": "The Swiss-army knife of modular synthesis; an analog function generator that handles envelopes, LFO loops, voltage offsets, and complex mixing."
+  },
+  {
+    "id": 16,
+    "name": "Rシール (Rene) Sequencer",
+    "brand": "Make Noise",
+    "category": "Eurorack Modules",
+    "price": 49000,
+    "tags": ["eurorack", "sequencer", "cartesian", "touch-grid"],
+    "description": "The world's only Cartesian sequencer module for Eurorack synth rigs, letting users plot shifting, geometric note patterns across a 4x4 touch-grid."
+  },
+  {
+    "id": 17,
+    "name": "Pamela Pro Workout",
+    "brand": "ALM Busy Circuits",
+    "category": "Eurorack Modules",
+    "price": 26500,
+    "tags": ["eurorack", "clock-generator", "lfo", "quantizer"],
+    "description": "A compact, highly programmable master clock source providing 8 outputs for generating tightly synced rhythmic gates, LFOs, and random voltages."
+  },
+  {
+    "id": 18,
+    "name": "NiftyCase Powered Rack",
+    "brand": "Cre8audio",
+    "category": "Cables & Accessories",
+    "price": 21900,
+    "tags": ["eurorack", "case", "power-supply", "midi-cv"],
+    "description": "An 84HP wide portable powered modular enclosure with built-in clean power rails, audio outputs, and an integrated USB-MIDI to CV converter interface."
+  },
+  {
+    "id": 19,
+    "name": "Excel Balanced Patch Cable",
+    "brand": "Cordial",
+    "category": "Cables & Accessories",
+    "price": 1490,
+    "tags": ["instrument-cable", "trs", "accessories", "balanced"],
+    "description": "A premium heavy-duty 3-meter balanced TRS instrument cable with genuine Neutrik connectors and copper shielding for noise-free studio monitoring."
+  },
+  {
+    "id": 20,
+    "name": "Classic 5-Pin MIDI Link",
+    "brand": "Roland",
+    "category": "Cables & Accessories",
+    "price": 950,
+    "tags": ["midi", "cable", "accessories", "din"],
+    "description": "A high-density woven shielded 10-foot DIN 5-pin MIDI cable designed to transmit reliable hardware automation data without latency lag."
+  },
+  {
+    "id": 21,
+    "name": "Neon Eurorack Monocable Pack",
+    "brand": "Erthenvar",
+    "category": "Cables & Accessories",
+    "price": 2400,
+    "tags": ["patch-cables", "eurorack", "accessories", "braided"],
+    "description": "A bundle of ten high-flexibility TS 3.5mm mini patch cables in distinct neon braided fibers, sized specifically for dense modular routing layouts."
+  },
+  {
+    "id": 22,
+    "name": "Classic Coiled Cable",
+    "brand": "Vox",
+    "category": "Cables & Accessories",
+    "price": 2990,
+    "tags": ["instrument-cable", "guitar", "accessories", "coiled"],
+    "description": "A vintage-style 29-foot coiled guitar and instrument cable featuring multi-gauge conductors for maximum signal tone preservation on stage."
+  },
+  {
+    "id": 23,
+    "name": "Monomix 4-Channel Mixer",
+    "brand": "Behringer",
+    "category": "Cables & Accessories",
+    "price": 3200,
+    "tags": ["mixer", "utility", "audio", "monitoring"],
+    "description": "An ultra-compact 4-channel line mixer designed for managing quick synth signal routing or summing independent instrument outputs down to one channel."
+  },
+  {
+    "id": 24,
+    "name": "M3 Eurorack Mounting Screws",
+    "brand": "Koma Elektronik",
+    "category": "Cables & Accessories",
+    "price": 650,
+    "tags": ["eurorack", "screws", "mounting", "accessories"],
+    "description": "A pack of 50 steel M3 size rack mounting screws complete with custom nylon anti-rash washers to safeguard module faceplates from damage."
+  }
+]
