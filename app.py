@@ -1,7 +1,7 @@
 import os
 import time
-from flask import Flask, render_template, request, session, jsonify
-from dotenv import load_dotenv 
+from flask import Flask, jsonify, render_template, request, session
+from dotenv import load_dotenv
 
 from model import engine
 
@@ -44,9 +44,11 @@ def index():
 def product_detail(product_id):
     product = next((p for p in engine.products if p["id"] == product_id), None)
     if product is None:
-        return "Not found", 404
+        return "Product not found", 404
+        
     push_event(product_id, "click")
     recs, alpha = engine.recommend(get_events(), get_cart(), top_n=4)
+    
     return render_template(
         "product.html",
         product=product,
@@ -65,10 +67,13 @@ def cart():
 
 @app.route("/api/track", methods=["POST"])
 def api_track():
-    payload = request.get_json(force=True)
-    product_id = int(payload.get("product_id"))
-    action = payload.get("action", "view")
+    payload = request.get_json(force=True) or {}
+    try:
+        product_id = int(payload.get("product_id"))
+    except (TypeError, ValueError):
+        return jsonify({"error": "Invalid or missing product_id"}), 400
 
+    action = payload.get("action", "view")
     if action not in ("view", "click", "cart"):
         action = "view"
 
@@ -112,6 +117,6 @@ def api_reset():
     return jsonify({"ok": True})
 
 
-if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
