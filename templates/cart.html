@@ -17,7 +17,7 @@
   </ul>
   <p class="cart-total">Total: Rs.{{ "%.0f"|format(items | sum(attribute="price")) }}</p>
   {% else %}
-  <p class="empty-state">Nothing patched in yet. Add something from the shop and it'll show up here.</p>
+  <p class="empty-state">No items in cart. Add something from the shop and it'll show up here.</p>
   {% endif %}
 </div>
 {% endblock %}
