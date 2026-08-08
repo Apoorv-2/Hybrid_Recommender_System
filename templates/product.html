@@ -18,7 +18,7 @@
       <p class="eyebrow">{{ product.category }} · {{ product.brand }}</p>
       <h1>{{ product.name }}</h1>
       <p class="product-desc">{{ product.description }}</p>
-      <p class="product-price">${{ "%.0f"|format(product.price) }}</p>
+      <p class="product-price">Rs.{{ "%.0f"|format(product.price) }}</p>
       <button class="btn-add-cart btn-large" data-cart-id="{{ product.id }}">add to cart</button>
       <div class="tag-row">
         {% for t in product.tags %}<span class="tag">{{ t }}</span>{% endfor %}
